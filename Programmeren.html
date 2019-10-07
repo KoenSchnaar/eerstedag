@@ -4,12 +4,33 @@
         <style>
         </style>
         <script>
+            function alertfunctie(){
+                alert("hoppa");
+                var student1voornaam = "Johan";
+                var student1leeftijd = 25;
+                voorstellen(student1voornaam, student1leeftijd);
+            }
+            function voorstellen(voornaam, leeftijd){
+                alert("Hallo, ik ben "+voornaam+" en ik ben "+leeftijd+" jaar oud");
+            }
+            function viaEenObject(){
+                var student1 = {};
+                student1.voornaam = "fred";
+                student1.leeftijd = 45;
+                voorstellenViaObject(student1);
+            }
+            function voorstellenViaObject(student){
+                alert("Hallo, I am "+student.voornaam +" and I am "+student.leeftijd+" years old");
+            }
         </script>
     </head>
     <body>
         <p>
             zet hier maar wat tekst neer
         </p>
+        <input type = "button" value = "klik maar" onclick="alertfunctie()">
+        <input type = "button" value = "klik maar" onclick="viaEenObject()">
+
     </body>
 
 </html>
